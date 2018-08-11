@@ -1,0 +1,12 @@
+version: '3'
+services:
+  goworkspace:
+    build: .
+    volumes:
+      - ./../:/go/src/github.com/CiscoCloud/consul-cli
+    working_dir: /go/src/github.com/CiscoCloud/consul-cli
+    command: /bin/sleep 1000d
+
+networks:
+  default:
+    driver: bridge
